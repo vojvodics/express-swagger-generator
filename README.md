@@ -52,6 +52,25 @@ Open http://<app_host>:<app_port>/api-docs in your browser to view the documenta
 exports.foo = function() {}
 ```
 
+For model definitions:
+
+```
+/**
+ * @typedef Point
+ * @property {integer} x.required
+ * @property {integer} y.required
+ * @property {string} color
+ */
+
+ // Now I can use it as below:
+
+ /**
+  * Insert a point
+  * @route POST /api/point
+  * @param {Point.model} point.body.required - the new point
+  */
+```
+
 #### More
 
 This module is based on [express-swaggerize-ui](https://github.com/pgroot/express-swaggerize-ui) and [Doctrine-File](https://github.com/researchgate/doctrine-file)
