@@ -56,19 +56,44 @@ For model definitions:
 
 ```
 /**
+ * @typedef Product
+ * @property {integer} id
+ * @property {string} name.required
+ * @property {Array.<Point>} Point
+ */
+
+/**
  * @typedef Point
  * @property {integer} x.required
  * @property {integer} y.required
  * @property {string} color
  */
 
- // Now I can use it as below:
+/**
+ * @typedef Error
+ * @property {string} code.required
+ */
 
- /**
-  * Insert a point
-  * @route POST /api/point
-  * @param {Point.model} point.body.required - the new point
-  */
+/**
+ * @typedef Response
+ * @property {[integer]} code
+ */
+
+
+/**
+ * This function comment is parsed by doctrine
+ * sdfkjsldfkj
+ * @route POST /users
+ * @param {Point.model} point.body.required - the new point
+ * @group foo - Operations about user
+ * @param {string} email.query.required - username or email
+ * @param {string} password.query.required - user's password.
+ * @operationId retrieveFooInfo
+ * @produces application/json application/xml
+ * @consumes application/json application/xml
+ * @returns {Response.model} 200 - An array of user info
+ * @returns {Product.model}  default - Unexpected error
+ */
 ```
 
 #### More
