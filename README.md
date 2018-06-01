@@ -26,7 +26,15 @@ let options = {
             "application/json",
             "application/xml"
         ],
-        schemes: ['http', 'https']
+        schemes: ['http', 'https'],
+		securityDefinitions: {
+            JWT: {
+                type: 'apiKey',
+                in: 'header',
+                name: 'Authorization',
+                description: "",
+            }
+        }
     },
     basedir: __dirname, //app absolute path
     files: ['./routes/**/*.js'] //Path to the API handle folder
@@ -93,6 +101,7 @@ For model definitions:
  * @consumes application/json application/xml
  * @returns {Response.model} 200 - An array of user info
  * @returns {Product.model}  default - Unexpected error
+ * @security JWT
  */
 ```
 
