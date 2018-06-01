@@ -58,14 +58,14 @@ For model definitions:
 /**
  * @typedef Product
  * @property {integer} id
- * @property {string} name.required
+ * @property {string} name.required - Some description for product
  * @property {Array.<Point>} Point
  */
 
 /**
  * @typedef Point
  * @property {integer} x.required
- * @property {integer} y.required
+ * @property {integer} y.required - Some description for point
  * @property {string} color
  */
 
