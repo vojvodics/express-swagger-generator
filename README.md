@@ -101,6 +101,7 @@ For model definitions:
  * @consumes application/json application/xml
  * @returns {Response.model} 200 - An array of user info
  * @returns {Product.model}  default - Unexpected error
+ * @returns {Array.<Point>} Point - Some description for point
  * @headers {integer} 200.X-Rate-Limit - calls per hour allowed by the user
  * @headers {string} 200.X-Expires-After - 	date in UTC when token expires
  * @security JWT
