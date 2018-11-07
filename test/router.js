@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 /**
  * JSON parameters require a model. This one just has "name"
  * @typedef ReqNameJSON
- * @property {string} name.required - name of person making request
+ * @property {string} name.required - name of person making request - eg: John Doe
  */
 /**
  * This route will respond greetings to name in json request body.
@@ -38,7 +38,7 @@ router.post("/", function() {});
 /**
  * @typedef Point
  * @property {integer} x.required
- * @property {integer} y.required - Some description for point
+ * @property {integer} y.required - Some description for point - eg: 1234
  * @property {Array.<Color>} Color
  */
 
