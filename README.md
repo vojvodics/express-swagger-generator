@@ -96,6 +96,7 @@ For model definitions:
  * @group foo - Operations about user
  * @param {string} email.query.required - username or email
  * @param {string} password.query.required - user's password.
+ * @param {enum} status.query.required - Status values that need to be considered for filter - eg: available,pending
  * @operationId retrieveFooInfo
  * @produces application/json application/xml
  * @consumes application/json application/xml
